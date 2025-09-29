@@ -1,0 +1,67 @@
+// Path: app/fatimah/page.tsx
+
+"use client"
+
+import { useState } from "react"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+
+export default function FatimahSupportPage() {
+  const [copied, setCopied] = useState<"none" | "mtn">("none")
+
+    const mtnDisplay = "+233 594 375 428"
+      const mtnRaw = "233594375428"
+        const receiver = "Mavis Boakye (Fatimah’s mother – funds go directly to Fatimah)"
+
+          const copy = async (text: string, type: "mtn") => {
+              try {
+                    await navigator.clipboard.writeText(text)
+                          setCopied(type)
+                                setTimeout(() => setCopied("none"), 2000)
+                                    } catch {
+                                          // noop
+                                              }
+                                                }
+
+                                                  return (
+                                                      <div className="min-h-screen bg-gradient-to-b from-yellow-100 via-orange-200 to-orange-400">
+                                                            <div className="max-w-3xl mx-auto p-6 space-y-8">
+                                                                    <header className="space-y-2 text-gray-800 text-center">
+                                                                              <h1 className="text-3xl font-bold">❤️ Support Fatimah</h1>
+                                                                                        <p className="opacity-90">
+                                                                                                    Direct support via <strong>WorldRemit → MTN Mobile Money (Ghana)</strong><br />
+                                                                                                                Receiver: <strong>{receiver}</strong> · Number:{" "}
+                                                                                                                            <span className="font-mono">{mtnDisplay}</span>
+                                                                                                                                      </p>
+                                                                                                                                              </header>
+
+                                                                                                                                                      <Card className="shadow-md bg-white/90 backdrop-blur">
+                                                                                                                                                                <CardHeader>
+                                                                                                                                                                            <CardTitle>MTN Mobile Money – Direct Support</CardTitle>
+                                                                                                                                                                                        <CardDescription>
+                                                                                                                                                                                                      Receiver: {receiver}
+                                                                                                                                                                                                                  </CardDescription>
+                                                                                                                                                                                                                            </CardHeader>
+                                                                                                                                                                                                                                      <CardContent className="space-y-4">
+                                                                                                                                                                                                                                                  <div className="rounded-xl border p-4">
+                                                                                                                                                                                                                                                                <div className="text-sm opacity-80">MTN Mobile Money number</div>
+                                                                                                                                                                                                                                                                              <div className="font-mono text-lg">{mtnDisplay}</div>
+                                                                                                                                                                                                                                                                                            <div className="flex gap-3 mt-3">
+                                                                                                                                                                                                                                                                                                            <Button
+                                                                                                                                                                                                                                                                                                                              variant="outline"
+                                                                                                                                                                                                                                                                                                                                                onClick={() => copy(mtnRaw, "mtn")}
+                                                                                                                                                                                                                                                                                                                                                                >
+                                                                                                                                                                                                                                                                                                                                                                                  {copied === "mtn" ? "Copied!" : "Copy number"}
+                                                                                                                                                                                                                                                                                                                                                                                                  </Button>
+                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        <p className="text-sm opacity-70">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      Transfers can be made via <strong>WorldRemit</strong>.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Funds go via <strong>Mavis (Fatimah’s mother)</strong> and directly to Fatimah for food and essentials. 🙏🏼
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </CardContent>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </Card>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              }
