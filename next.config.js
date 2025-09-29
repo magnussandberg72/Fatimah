@@ -18,3 +18,10 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  swcMinify: false, // 🔴 stänger av SWC
+}
+
+module.exports = nextConfig
