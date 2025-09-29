@@ -3,7 +3,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true, // fångar fler buggar i dev
-  swcMinify: true,       // snabbare och mindre build
+  swcMinify: false,      // 🔴 stänger av SWC (nödvändigt i Termux)
 
   // Tillåt externa bilder om vi skulle behöva senare
   images: {
@@ -15,11 +15,6 @@ const nextConfig = {
     locales: ["en", "sv"],
     defaultLocale: "en",
   },
-}
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  swcMinify: false, // 🔴 stänger av SWC
 }
 
 module.exports = nextConfig
