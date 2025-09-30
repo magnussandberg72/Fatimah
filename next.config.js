@@ -7,8 +7,6 @@ const nextConfig = {
   swcMinify: false,
   compiler: {},
   
-NODE_OPTIONS="--no-experimental-fetch",
-
   // 🚫 Inga SWC-transforms
   experimental: {
     forceSwcTransforms: false,
