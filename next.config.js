@@ -6,6 +6,8 @@ const nextConfig = {
   // 🚫 Stäng av SWC helt
   swcMinify: false,
   compiler: {},
+  
+NODE_OPTIONS="--no-experimental-fetch",
 
   // 🚫 Inga SWC-transforms
   experimental: {
