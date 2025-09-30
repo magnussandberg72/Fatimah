@@ -1,12 +1,13 @@
 // next.config.js
+const withTM = require("next-transpile-modules")([]);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: false, // stänger av SWC helt
-  compiler: undefined, // inga SWC-transforms
+  swcMinify: false,
   experimental: {
-    forceSwcTransforms: false, // blockera SWC
+    forceSwcTransforms: false,
   },
 };
 
-module.exports = nextConfig;
+module.exports = withTM(nextConfig);
