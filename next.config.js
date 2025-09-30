@@ -2,11 +2,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: false, // 🚫 stäng av SWC
-  compiler: {},     // tom compiler → inga SWC-optimeringar
+  swcMinify: false,          // stäng av SWC minifier
   experimental: {
-    forceSwcTransforms: false, // 🚫 förhindra SWC-fallback
+    forceSwcTransforms: false, // stoppa SWC-transformer
   },
-}
+  compiler: {},              // ingen SWC-compiler
+  transpilePackages: [],     // säkerställ att Babel används
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
