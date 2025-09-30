@@ -27,3 +27,5 @@ Now this site is here to invite more people to join and help.
 ### 1. Install dependencies
 ```bash
 npm install
+## Test Deploy
+Detta är en test-ändring för att se att Vercel bygger rätt från GitHub.
