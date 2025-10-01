@@ -9,11 +9,21 @@ export default function HomePage() {
       className="relative min-h-screen bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: "url('/fatimah.jpg')" }}
     >
-      {/* Overlay for readability */}
+      {/* Overlay för läsbarhet */}
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center text-white space-y-6 max-w-xl bg-black bg-opacity-50 p-8 rounded-xl shadow-lg">
+      {/* Klickbar logga uppe till vänster */}
+      <header className="absolute top-4 left-4">
+        <Link
+          href="/"
+          className="text-white text-lg font-semibold opacity-80 hover:opacity-100 transition"
+        >
+          🌸 Fatimah Support
+        </Link>
+      </header>
+
+      {/* Text ovanpå bilden */}
+      <div className="relative z-10 text-center text-white space-y-6 max-w-xl">
         <h1 className="text-4xl font-bold">🌸 Welcome to Fatimah Support</h1>
         <p className="text-lg">
           Learn about Fatimah’s story and how you can support her directly.
