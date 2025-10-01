@@ -32,7 +32,7 @@ export default function FatimahPresentationPage() {
           title="Fatimah's work video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-        />
+        ></iframe>
       </div>
 
       {/* Extra Story Section */}
