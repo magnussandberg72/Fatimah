@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS=--require ./babel-register.js next dev -H 0.0.0.0 -p 5000",
-    "build": "NODE_OPTIONS=--require ./babel-register.js next build",
-    "start": "NODE_OPTIONS=--require ./babel-register.js next start -H 0.0.0.0 -p 5000"
+  "dev": "NODE_OPTIONS='--require ./babel-register.js' next dev -H 0.0.0.0 -p 5000",
+  "build": "NODE_OPTIONS='--require ./babel-register.js' next build",
+  "start": "NODE_OPTIONS='--require ./babel-register.js' next start -H 0.0.0.0 -p 5000"
   },
   "dependencies": {
     "next": "14.2.3",
