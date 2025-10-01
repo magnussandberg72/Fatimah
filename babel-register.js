@@ -1,4 +1,8 @@
-require('@babel/register')({
-  presets: ['@babel/preset-env', '@babel/preset-react'],
-  extensions: ['.js', '.jsx', '.ts', '.tsx'],
+require("@babel/register")({
+  extensions: [".js", ".jsx", ".ts", ".tsx"],
+  presets: [
+    ["@babel/preset-env", { targets: { node: "current" } }],
+    ["@babel/preset-react", { runtime: "automatic" }]
+  ],
+  ignore: [/node_modules/],
 });
