@@ -3,17 +3,22 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  // 🚫 Stäng av SWC helt
+  // 🚫 Stäng av all SWC
   swcMinify: false,
   compiler: {},
-  
-  // 🚫 Inga SWC-transforms
+
   experimental: {
     forceSwcTransforms: false,
   },
 
   // ✅ Kör alltid via Babel
   transpilePackages: [],
+  
+  // 🔇 Tysta SWC-loggar
+  webpack: (config) => {
+    config.infrastructureLogging = { level: 'error' }; // bara fel, inga warnings
+    return config;
+  },
 };
 
 module.exports = nextConfig;
