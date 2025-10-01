@@ -7,8 +7,15 @@ html, body {
   min-height: 100%;
   font-family: sans-serif;
 
-  /* Ljusblå himmel → mörkgrön mark */
-  background: linear-gradient(to bottom, #ccefff 0%, #80cfa9 60%, #064e3b 100%);
+  /* Himmel → skogstoning */
+  background: linear-gradient(
+    to bottom,
+    #ccefff 0%,   /* ljusblå himmel */
+    #99e2b4 40%,  /* ljusgrön mittzon */
+    #2d6a4f 75%,  /* djupare grön */
+    #081c15 100%  /* mörk skog */
+  );
+
   color: #222;
 }
 
