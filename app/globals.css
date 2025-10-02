@@ -1,13 +1,18 @@
 /* Path: app/globals.css */
 
-/* Reset */
+/* === Tailwind import === */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Reset & grund === */
 html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
   font-family: sans-serif;
 
-  /* Himmel → skogstoning */
+  /* 🌄 Gradient bakgrund (himmel → skog) */
   background: linear-gradient(
     to bottom,
     #ccefff 0%,   /* ljusblå himmel */
@@ -19,20 +24,20 @@ html, body {
   color: #222;
 }
 
-/* Headers */
+/* === Headers === */
 h1, h2, h3, h4 {
   font-weight: 700;
   color: #111;
   margin-top: 0;
 }
 
-/* Paragraphs */
+/* === Paragraphs === */
 p {
   line-height: 1.6;
   margin: 0.5em 0;
 }
 
-/* Links */
+/* === Links === */
 a {
   color: inherit;
   text-decoration: none;
@@ -42,7 +47,7 @@ a:hover {
   opacity: 0.85;
 }
 
-/* Buttons – global style */
+/* === Buttons – global style === */
 button,
 a.button {
   border-radius: 0.5rem;
