@@ -1,40 +1,4 @@
-/* === Tailwind imports === */
+
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
-/* === Basic reset === */
-html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  font-family: sans-serif;
-  background-color: #f9fafb; /* ljus bakgrund */
-  color: #111; /* standard textfärg */
-}
-
-/* === Links === */
-a {
-  color: #2563eb; /* blå (tailwind blå-600) */
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-  color: #1d4ed8; /* blå-700 */
-}
-
-/* === Buttons === */
-button, .button {
-  border-radius: 0.375rem; /* rundade hörn */
-  padding: 0.5rem 1rem;
-  background-color: #3b82f6; /* blå-500 */
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-button:hover, .button:hover {
-  background-color: #2563eb; /* blå-600 */
-}
+@tailwind utilities
