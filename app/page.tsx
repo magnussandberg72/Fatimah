@@ -1,40 +1,47 @@
-// Path: app/page.tsx
-"use client"
-
-import Link from "next/link"
+// app/page.tsx
+import Image from "next/image"
 
 export default function HomePage() {
   return (
-    <div
-      className="relative min-h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: "url('/fatimah.jpg')" }}
-    >
-      {/* Overlay för läsbarhet */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+    <main style={{ fontFamily: "sans-serif", textAlign: "center", padding: "2rem" }}>
+      <h1 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
+        🌸 Welcome to Fatimah Support 🌸
+      </h1>
 
-      {/* Klickbar logga uppe till vänster */}
-      <header className="absolute top-4 left-4">
-        <Link
-          href="/"
-          className="text-white text-lg font-semibold opacity-80 hover:opacity-100 transition"
-        >
-          🌸 Fatimah Support
-        </Link>
-      </header>
+      <p style={{ marginBottom: "1.5rem" }}>
+        Learn about Fatimah’s story and support her journey directly.
+      </p>
 
-      {/* Text ovanpå bilden */}
-      <div className="relative z-10 text-center text-white space-y-6 max-w-xl">
-        <h1 className="text-4xl font-bold">🌸 Welcome to Fatimah Support</h1>
-        <p className="text-lg">
-          Learn about Fatimah’s story and how you can support her directly.
-        </p>
-        <Link
-          href="/fatimah/presentation"
-          className="inline-block bg-pink-500 text-white px-6 py-3 rounded-lg shadow hover:bg-pink-600 transition"
-        >
-          Learn about Fatimah
-        </Link>
+      <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+        <Image
+          src="/fatimah.jpg"
+          alt="Fatimah"
+          width={600}
+          height={400}
+          style={{ width: "100%", height: "auto", borderRadius: "8px" }}
+        />
       </div>
-    </div>
+
+      <p style={{ marginTop: "1.5rem" }}>
+        💙💚❤️ Thank you for your support 💙💚❤️
+      </p>
+
+      <a
+        href="https://youtube.com" // byt till din YouTube-länk
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-block",
+          marginTop: "1.5rem",
+          padding: "0.75rem 1.5rem",
+          backgroundColor: "#2563eb",
+          color: "#fff",
+          borderRadius: "6px",
+          textDecoration: "none",
+        }}
+      >
+        Watch Video
+      </a>
+    </main>
   )
 }
