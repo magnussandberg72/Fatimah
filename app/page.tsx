@@ -1,43 +1,49 @@
-// app/page.tsx
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="relative h-screen w-screen">
-      {/* 🔹 Bakgrundsbild */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/fatimah.jpg')" }}
-      />
+    <div
+      style={{
+        backgroundImage: "url('/fatimah.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+      }}
+      className="relative"
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* 🔹 Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      {/* Header */}
+      <div className="absolute top-4 left-4 text-white text-sm font-semibold z-10">
+        🌸 Fatimah Support
+      </div>
 
-      {/* 🔹 Innehåll */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 text-white">
-        <h1 className="text-3xl font-bold mb-4">🌸 Welcome to Fatimah Support 🌸</h1>
-        <p className="mb-6 max-w-md">
+      {/* Content */}
+      <div className="relative flex flex-col items-center justify-center text-center text-white h-screen px-4">
+        <h1 className="text-3xl font-bold mb-4">
+          🌸 Welcome to Fatimah Support 🌸
+        </h1>
+        <p className="mb-8 max-w-md">
           Learn about Fatimah’s story and how you can support her directly.
         </p>
 
-        {/* 🔹 Knappar bredvid varandra */}
-        <div className="flex space-x-4">
-          <Link
-            href="/fatimah/presentation"
-            className="bg-pink-500 hover:bg-pink-600 px-6 py-3 rounded-lg shadow text-white font-medium"
-          >
-            💖 Learn about Fatimah
+        {/* Buttons side by side */}
+        <div className="flex gap-4">
+          <Link href="/fatimah/presentation">
+            <button className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-lg">
+              💖 Learn about Fatimah
+            </button>
           </Link>
-          <Link
-            href="/fatimah"
-            className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg shadow text-white font-medium"
-          >
-            🤝 Support Fatimah
+          <Link href="/fatimah">
+            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg">
+              🤝 Support Fatimah
+            </button>
           </Link>
         </div>
       </div>
-    </main>
-  )
+    </div>
+  );
 }
