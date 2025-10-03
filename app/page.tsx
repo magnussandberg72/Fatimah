@@ -1,47 +1,51 @@
 // app/page.tsx
-import Image from "next/image"
+"use client"
+
+import Link from "next/link"
 
 export default function HomePage() {
   return (
-    <main style={{ fontFamily: "sans-serif", textAlign: "center", padding: "2rem" }}>
-      <h1 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
-        🌸 Welcome to Fatimah Support 🌸
-      </h1>
+    <main className="relative h-screen w-screen overflow-hidden">
+      {/* Bakgrundsbild */}
+      <img 
+        src="/fatimah.jpg" 
+        alt="Fatimah" 
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-      <p style={{ marginBottom: "1.5rem" }}>
-        Learn about Fatimah’s story and support her journey directly.
-      </p>
+      {/* Overlay för kontrast */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-        <Image
-          src="/fatimah.jpg"
-          alt="Fatimah"
-          width={600}
-          height={400}
-          style={{ width: "100%", height: "auto", borderRadius: "8px" }}
-        />
+      {/* Header uppe till vänster */}
+      <div className="absolute top-4 left-4 text-white text-sm font-semibold">
+        🌸 Fatimah Support
       </div>
 
-      <p style={{ marginTop: "1.5rem" }}>
-        💙💚❤️ Thank you for your support 💙💚❤️
-      </p>
+      {/* Centralt block */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          🌸 Welcome to Fatimah Support
+        </h1>
+        <p className="mb-8 text-lg max-w-xl">
+          Learn about Fatimah’s story and how you can support her directly.
+        </p>
 
-      <a
-        href="https://youtube.com" // byt till din YouTube-länk
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "inline-block",
-          marginTop: "1.5rem",
-          padding: "0.75rem 1.5rem",
-          backgroundColor: "#2563eb",
-          color: "#fff",
-          borderRadius: "6px",
-          textDecoration: "none",
-        }}
-      >
-        Watch Video
-      </a>
+        {/* Knappar bredvid varandra */}
+        <div className="flex gap-4">
+          <Link
+            href="/fatimah/presentation"
+            className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg shadow transition"
+          >
+            💖 Learn about Fatimah
+          </Link>
+          <Link
+            href="/fatimah"
+            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg shadow transition"
+          >
+            🤝 Support Fatimah
+          </Link>
+        </div>
+      </div>
     </main>
   )
 }
